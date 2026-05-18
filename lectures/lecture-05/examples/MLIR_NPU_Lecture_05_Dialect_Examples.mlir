@@ -9,12 +9,12 @@
 module {
   func.func @matmul_bias_relu(
       %arg0: tensor<1x128x256xf16>,
-      %arg1: tensor<256x64xf16>,
+      %arg1: tensor<1x256x64xf16>,
       %bias: tensor<64xf16>) -> tensor<1x128x64xf16> {
 
     %init = tensor.empty() : tensor<1x128x64xf16>
-    %mm = linalg.matmul
-        ins(%arg0, %arg1 : tensor<1x128x256xf16>, tensor<256x64xf16>)
+    %mm = linalg.batch_matmul
+        ins(%arg0, %arg1 : tensor<1x128x256xf16>, tensor<1x256x64xf16>)
         outs(%init : tensor<1x128x64xf16>) -> tensor<1x128x64xf16>
 
     %zero = arith.constant 0.0 : f16

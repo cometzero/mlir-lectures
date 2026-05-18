@@ -6,6 +6,7 @@ __MACOSX/
 # Local build/test artifacts
 build/
 .cache/
+.lesson-run-logs/
 *.pyc
 __pycache__/
 

@@ -9,7 +9,8 @@ GPT-5.5로 생성한 MLIR/NPU Compiler 20강 스터디 자료를 강의와 실�
 - `docs/syllabus.md`: 20강 전체 커리큘럼
 - `docs/teaching-guide.md`: 강의 운영 방식과 평가/피드백 가이드
 - `docs/lab-environment.md`: MLIR 실습 환경 준비와 실행 방법
-- `scripts/run_lesson.sh`: lecture별 예제 실행/점검 helper
+- `scripts/run_lesson.sh`: lecture별 stock-safe 예제 실행/점검 helper
+- `scripts/run_all_lessons.sh`: 20개 lecture smoke test helper
 - `scripts/verify_materials.py`: 자료 누락 여부 검증 helper
 - `course-package/`: 전체 코스 요약 패키지
 
@@ -27,9 +28,10 @@ MLIR 도구가 설치되어 있다면:
 mlir-opt --version
 FileCheck --version
 scripts/run_lesson.sh 04 --try-mlir
+scripts/run_all_lessons.sh
 ```
 
-MLIR 도구가 아직 없다면 먼저 `docs/lab-environment.md`를 확인하세요. 많은 예제는 custom/pseudo NPU dialect를 포함하므로, 모든 `.mlir` 파일이 vanilla `mlir-opt`에서 바로 성공하는 것을 목표로 하지 않습니다. 강의에서는 실패한 예제를 통해 필요한 dialect registration, verifier, lowering boundary를 토론할 수 있습니다.
+MLIR 도구가 아직 없다면 먼저 `docs/lab-environment.md`를 확인하세요. 많은 예제는 custom/pseudo NPU dialect를 포함하므로, 모든 `.mlir` 파일이 vanilla `mlir-opt`에서 바로 성공하는 것을 목표로 하지 않습니다. `scripts/run_lesson.sh --try-mlir`는 stock MLIR toolchain에서 검증 가능한 예제만 실행하고, custom backend가 필요한 예제는 `SKIP`으로 표시합니다. 강의에서는 SKIP된 예제를 통해 필요한 dialect registration, verifier, lowering boundary를 토론할 수 있습니다.
 
 ## 커리큘럼
 
