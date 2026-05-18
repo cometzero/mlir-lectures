@@ -30,6 +30,26 @@ mlir-opt --version
 FileCheck --version
 ```
 
+`sudo`를 사용할 수 없지만 apt repository 접근은 가능한 환경에서는 패키지를
+`build/` 아래에 풀어 임시 toolchain처럼 사용할 수 있습니다. 이 저장소의
+`build/` 디렉터리는 git ignore 대상입니다.
+
+```bash
+mkdir -p build/toolchains/apt-mlir-18
+cd build/toolchains/apt-mlir-18
+apt download mlir-18-tools
+dpkg-deb -x mlir-18-tools_*_amd64.deb root
+cd ../../..
+export PATH="$PWD/build/toolchains/apt-mlir-18/root/usr/lib/llvm-18/bin:/usr/lib/llvm-18/bin:$PATH"
+mlir-opt --version
+mlir-translate --version
+FileCheck --version
+```
+
+이 rootless 경로는 `llvm-18-tools`와 `libllvm18` 같은 런타임 의존성이 이미
+설치된 개발 컨테이너에 적합합니다. 의존성이 없다면 `sudo apt-get install` 경로를
+사용하거나 LLVM/MLIR source build를 사용하세요.
+
 ## LLVM/MLIR source build 예시
 
 강의용으로는 MLIR tools만 있으면 되므로 shallow clone과 host target build를 권장합니다. 전체 LLVM tree와 build artifact는 수 GB 이상이 필요합니다.
