@@ -1,0 +1,30 @@
+{
+  "lecture": 4,
+  "topic": "mlir-opt, mlir-translate, FileCheck",
+  "created_at": "2026-05-05T14:02:20.161245",
+  "files": [
+    "MLIR_NPU_Lecture_04_Handout.md",
+    "MLIR_NPU_Lecture_04_Notes.docx",
+    "MLIR_NPU_Lecture_04_Notes.pdf",
+    "MLIR_NPU_Lecture_04_Quiz.md",
+    "MLIR_NPU_Lecture_04_Slides.pdf",
+    "MLIR_NPU_Lecture_04_Slides.pptx",
+    "MLIR_NPU_Lecture_04_Worksheet.docx",
+    "MLIR_NPU_Lecture_04_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_04_FileCheck_Anatomy.png",
+    "assets/MLIR_NPU_Lecture_04_Pass_Pipeline.png",
+    "assets/MLIR_NPU_Lecture_04_Regression_Matrix.png",
+    "assets/MLIR_NPU_Lecture_04_Tooling_Loop.png",
+    "examples/01_parse_verify.mlir",
+    "examples/02_cse_regression_test.mlir",
+    "examples/03_pass_pipeline_debug.mlir",
+    "examples/04_filecheck_directives.mlir",
+    "examples/05_verify_diagnostics_negative.mlir",
+    "examples/06_mlir_translate_to_llvm.mlir",
+    "examples/07_npu_pass_test_template.mlir",
+    "examples/lit_local.cfg.py",
+    "examples/run_lesson04.sh",
+    "manifest.json"
+  ]
+}

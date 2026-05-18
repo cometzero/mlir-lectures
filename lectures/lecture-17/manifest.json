@@ -1,0 +1,32 @@
+{
+  "lecture": 17,
+  "topic": "Fusion, Layout Propagation, Transformer MLP fusion candidate analysis",
+  "files": [
+    "MLIR_NPU_Lecture_17_Handout.md",
+    "MLIR_NPU_Lecture_17_Notes.docx",
+    "MLIR_NPU_Lecture_17_Notes.pdf",
+    "MLIR_NPU_Lecture_17_Quick_Reference.md",
+    "MLIR_NPU_Lecture_17_Quiz.md",
+    "MLIR_NPU_Lecture_17_Slides.pdf",
+    "MLIR_NPU_Lecture_17_Slides.pptx",
+    "MLIR_NPU_Lecture_17_Worksheet.docx",
+    "MLIR_NPU_Lecture_17_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_17_Fusion_Decision_Tree.png",
+    "assets/MLIR_NPU_Lecture_17_Fusion_Layout_Pipeline.png",
+    "assets/MLIR_NPU_Lecture_17_Layout_Propagation_Graph.png",
+    "assets/MLIR_NPU_Lecture_17_Memory_Traffic_Reduction.png",
+    "assets/MLIR_NPU_Lecture_17_Transformer_MLP_Fusion_Candidates.png",
+    "examples/01_transformer_mlp_before.mlir",
+    "examples/02_mlp_fusion_after_pseudo.mlir",
+    "examples/03_layout_propagation_pseudo.mlir",
+    "examples/04_fusion_candidate_matrix.md",
+    "examples/05_fusion_pass_skeleton.cpp",
+    "examples/06_filecheck_fusion_layout_test.mlir",
+    "examples/07_memory_traffic_calculator.py",
+    "examples/08_npu_mlp_fusion_policy.yaml",
+    "examples/09_transform_schedule_for_mlp.mlir",
+    "examples/10_layout_propagation_checklist.md",
+    "manifest.json"
+  ]
+}

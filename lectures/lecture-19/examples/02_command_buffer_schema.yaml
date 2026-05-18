@@ -1,0 +1,36 @@
+abi:
+  name: npu_command_buffer
+  major: 1
+  minor: 0
+  target_id: npu256_edge_v1
+header:
+  magic: 0x4E505543   # 'NPUC'
+  alignment_bytes: 64
+  fields:
+    - abi_major: uint16
+    - abi_minor: uint16
+    - target_id: uint32
+    - command_count: uint32
+    - descriptor_count: uint32
+    - relocation_count: uint32
+    - byte_size: uint32
+    - checksum_crc32: uint32
+command_kinds:
+  DMA_LOAD: 1
+  DMA_STORE: 2
+  MATMUL: 16
+  REQUANT: 17
+  BARRIER: 240
+  FENCE: 241
+packet_common:
+  - kind: uint16
+  - size_bytes: uint16
+  - flags: uint32
+  - wait_token: uint32
+  - signal_token: uint32
+  - debug_tag: uint32
+validation:
+  - command buffer must end with FENCE for host-visible graph execution
+  - every wait_token must be produced by an earlier command or imported fence
+  - descriptor indices must be in range
+  - packet size must be aligned to 16 bytes

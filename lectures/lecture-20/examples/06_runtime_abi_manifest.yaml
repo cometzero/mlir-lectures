@@ -1,0 +1,19 @@
+artifact:
+  name: mlp_capstone_npu
+  compiler_version: 0.1
+  target:
+    arch: edu_npu_v1
+    native_tile: {m: 16, n: 16, k: 32}
+    memory_spaces: [dram, sram, accum]
+  binary_sections:
+    - {name: command_buffer, alignment: 64}
+    - {name: tensor_descriptors, alignment: 64}
+    - {name: weights, alignment: 4096}
+tensor_descriptor:
+  fields: [base, offset, rank, dims, strides, dtype, layout, memory_space, quant_scale, quant_zero_point]
+command_buffer:
+  header: [magic, version, num_packets, descriptor_table_offset]
+  packet_types: [DMA_LOAD, DMA_STORE, MATMUL, EPILOGUE, BARRIER, FENCE]
+compatibility:
+  require_runtime_abi_version: 1
+  fallback: cpu_if_unsupported

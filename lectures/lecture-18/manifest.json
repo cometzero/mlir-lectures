@@ -1,0 +1,33 @@
+{
+  "lecture": 18,
+  "title": "Custom NPU Dialect: npu.matmul / npu.dma / npu.barrier ODS Design",
+  "created": "2026-05-09T00:06:33.264162Z",
+  "files": [
+    "MLIR_NPU_Lecture_18_Handout.md",
+    "MLIR_NPU_Lecture_18_Quick_Reference.md",
+    "MLIR_NPU_Lecture_18_Quiz.md",
+    "README.md",
+    "MLIR_NPU_Lecture_18_Notes.docx",
+    "MLIR_NPU_Lecture_18_Worksheet.docx",
+    "MLIR_NPU_Lecture_18_Slides.pptx",
+    "MLIR_NPU_Lecture_18_Notes.pdf",
+    "MLIR_NPU_Lecture_18_Worksheet.pdf",
+    "MLIR_NPU_Lecture_18_Slides.pdf",
+    "examples/01_npu_dialect_overview.mlir",
+    "examples/02_npu_ops_td_skeleton.td",
+    "examples/03_npu_types_attrs_td_skeleton.td",
+    "examples/04_npu_op_verifier_skeleton.cpp",
+    "examples/05_npu_parse_print_skeleton.cpp",
+    "examples/06_npu_matmul_dma_barrier_example.mlir",
+    "examples/07_conversion_to_npu_kernel_skeleton.cpp",
+    "examples/08_filecheck_npu_dialect_test.mlir",
+    "examples/09_negative_verifier_tests.mlir",
+    "examples/10_cmake_skeleton.txt",
+    "examples/11_npu_dialect_design_checklist.md",
+    "assets/MLIR_NPU_Lecture_18_Custom_Dialect_Layering.png",
+    "assets/MLIR_NPU_Lecture_18_ODS_Anatomy.png",
+    "assets/MLIR_NPU_Lecture_18_NPU_Op_Contracts.png",
+    "assets/MLIR_NPU_Lecture_18_DMA_Barrier_Timeline.png",
+    "assets/MLIR_NPU_Lecture_18_Verifier_Decision_Tree.png"
+  ]
+}

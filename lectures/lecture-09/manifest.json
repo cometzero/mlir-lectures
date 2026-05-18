@@ -1,0 +1,27 @@
+{
+  "lecture": 9,
+  "title": "Pass Infrastructure",
+  "core_output": "NPU lowering pass pipeline draft",
+  "references": [
+    {
+      "name": "MLIR Pass Infrastructure",
+      "url": "https://mlir.llvm.org/docs/PassManagement/"
+    },
+    {
+      "name": "MLIR Using mlir-opt",
+      "url": "https://mlir.llvm.org/docs/Tutorials/MlirOpt/"
+    },
+    {
+      "name": "MLIR Passes",
+      "url": "https://mlir.llvm.org/docs/Passes/"
+    },
+    {
+      "name": "MLIR Language Reference",
+      "url": "https://mlir.llvm.org/docs/LangRef/"
+    },
+    {
+      "name": "MLIR Quickstart Rewrites",
+      "url": "https://mlir.llvm.org/docs/Tutorials/QuickstartRewrites/"
+    }
+  ]
+}

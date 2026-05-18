@@ -1,0 +1,25 @@
+# NPU schedule spec generated from Transform Dialect design exercise.
+schedule_name: matmul_bias_relu_int8
+payload_match:
+  op: linalg.matmul
+  lhs_type: tensor<MxKxi8>
+  rhs_type: tensor<KxNxi8>
+  acc_type: tensor<MxNxi32>
+policy:
+  outer_tile: {M: 64, N: 64, K: 64}
+  inner_tile: {M: 16, N: 16, K: 32}
+  vector_contract: {lhs: "16x32xi8", rhs: "32x16xi8", acc: "16x16xi32"}
+  epilogue_fusion: [bias, requant, relu]
+  memory:
+    A_tile_space: SRAM0
+    B_tile_space: SRAM1
+    C_acc_space: ACCUM
+    double_buffer: true
+  fallback:
+    unsupported_layout: repack_or_cpu
+    k_remainder: split_or_mask
+    dynamic_shape: runtime_tile_selection
+checks:
+  max_sram_bytes_per_core: 262144
+  max_accumulator_bytes: 65536
+  require_dma_alignment_bytes: 64

@@ -1,0 +1,41 @@
+{
+  "lecture": 12,
+  "title": "Lecture 12 - Bufferization: Tensor to MemRef, Alias, and Lifetime Analysis",
+  "materials": [
+    "slides pptx/pdf",
+    "notes docx/pdf",
+    "worksheet docx/pdf",
+    "handout",
+    "quiz",
+    "quick reference",
+    "examples",
+    "diagrams"
+  ],
+  "references": [
+    {
+      "title": "MLIR Bufferization",
+      "url": "https://mlir.llvm.org/docs/Bufferization/"
+    },
+    {
+      "title": "MLIR Bufferization Dialect",
+      "url": "https://mlir.llvm.org/docs/Dialects/BufferizationOps/"
+    },
+    {
+      "title": "MLIR MemRef Dialect",
+      "url": "https://mlir.llvm.org/docs/Dialects/MemRef/"
+    },
+    {
+      "title": "MLIR Builtin Dialect - MemRef type and memory space",
+      "url": "https://mlir.llvm.org/docs/Dialects/Builtin/"
+    },
+    {
+      "title": "MLIR Tensor Dialect",
+      "url": "https://mlir.llvm.org/docs/Dialects/TensorOps/"
+    },
+    {
+      "title": "MLIR Linalg Dialect",
+      "url": "https://mlir.llvm.org/docs/Dialects/Linalg/"
+    }
+  ],
+  "created_utc": "2026-05-07T13:53:01.153680Z"
+}

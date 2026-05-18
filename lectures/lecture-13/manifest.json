@@ -1,0 +1,31 @@
+{
+  "lecture": 13,
+  "topic": "MemRef, Layout, Memory Space",
+  "generated": "2026-05-07",
+  "files": [
+    "MLIR_NPU_Lecture_13_Handout.md",
+    "MLIR_NPU_Lecture_13_Notes.docx",
+    "MLIR_NPU_Lecture_13_Notes.pdf",
+    "MLIR_NPU_Lecture_13_Quick_Reference.md",
+    "MLIR_NPU_Lecture_13_Quiz.md",
+    "MLIR_NPU_Lecture_13_Slides.pdf",
+    "MLIR_NPU_Lecture_13_Slides.pptx",
+    "MLIR_NPU_Lecture_13_Worksheet.docx",
+    "MLIR_NPU_Lecture_13_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_13_Layout_Maps.png",
+    "assets/MLIR_NPU_Lecture_13_MemRef_Anatomy.png",
+    "assets/MLIR_NPU_Lecture_13_NPU_Memory_Hierarchy.png",
+    "assets/MLIR_NPU_Lecture_13_Runtime_Descriptor.png",
+    "assets/MLIR_NPU_Lecture_13_SRAM_Banking.png",
+    "examples/01_memref_type_examples.mlir",
+    "examples/02_subview_tile_buffers.mlir",
+    "examples/03_memory_space_mapping.mlir",
+    "examples/04_dma_memory_space_pseudo.mlir",
+    "examples/05_memref_descriptor_abi.md",
+    "examples/06_memory_space_pass_skeleton.cpp",
+    "examples/07_filecheck_memref_layout_test.mlir",
+    "examples/08_sram_footprint_calculator.py",
+    "manifest.json"
+  ]
+}

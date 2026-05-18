@@ -1,0 +1,18 @@
+// Lecture 10 PDLL sketch: not intended to compile without helper constraints.
+// Use this to discuss declarative matching vs handwritten C++ matching.
+
+Pattern FuseMatmulBiasRelu with benefit(10) {
+  let matmul = op<"linalg.matmul">;
+  let biasAdd = op<"linalg.generic">;
+  let relu = op<"linalg.generic">;
+
+  Constraint singleUse(matmul);
+  Constraint singleUse(biasAdd);
+  Constraint isBiasAddOf(biasAdd, matmul);
+  Constraint isReluOf(relu, biasAdd);
+  Constraint isLegalNpuEpilogue(matmul, biasAdd, relu);
+
+  Rewrite relu with {
+    replaceWithNpuMatmulBiasRelu(matmul, biasAdd, relu);
+  };
+}

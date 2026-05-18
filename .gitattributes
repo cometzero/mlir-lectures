@@ -1,0 +1,13 @@
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.png binary
+*.mlir text
+*.md text
+*.py text
+*.sh text eol=lf
+*.yaml text
+*.yml text
+*.td text
+*.cpp text
+*.h text

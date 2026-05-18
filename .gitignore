@@ -1,0 +1,13 @@
+# OS metadata
+.DS_Store
+__MACOSX/
+._*
+
+# Local build/test artifacts
+build/
+.cache/
+*.pyc
+__pycache__/
+
+# Local LLVM checkout if used for labs
+llvm-project/

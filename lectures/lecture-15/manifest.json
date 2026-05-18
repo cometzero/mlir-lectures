@@ -1,0 +1,32 @@
+{
+  "lecture": 15,
+  "topic": "Transform Dialect",
+  "created_at": "2026-05-08T13:24:43.507843Z",
+  "files": [
+    "MLIR_NPU_Lecture_15_Handout.md",
+    "MLIR_NPU_Lecture_15_Notes.docx",
+    "MLIR_NPU_Lecture_15_Notes.pdf",
+    "MLIR_NPU_Lecture_15_Quick_Reference.md",
+    "MLIR_NPU_Lecture_15_Quiz.md",
+    "MLIR_NPU_Lecture_15_Slides.pdf",
+    "MLIR_NPU_Lecture_15_Slides.pptx",
+    "MLIR_NPU_Lecture_15_Worksheet.docx",
+    "MLIR_NPU_Lecture_15_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_15_Handle_Lifecycle.png",
+    "assets/MLIR_NPU_Lecture_15_NPU_Schedule_IR.png",
+    "assets/MLIR_NPU_Lecture_15_Payload_vs_Transform.png",
+    "assets/MLIR_NPU_Lecture_15_Testing_Matrix.png",
+    "assets/MLIR_NPU_Lecture_15_Transform_Position.png",
+    "examples/01_payload_linalg_matmul_add_relu.mlir",
+    "examples/02_transform_schedule_tile_fuse_vectorize.mlir",
+    "examples/03_two_level_tiling_schedule_pseudo.mlir",
+    "examples/04_npu_schedule_spec.yaml",
+    "examples/05_filecheck_transform_test.mlir",
+    "examples/06_transform_interpreter_run.sh",
+    "examples/07_custom_npu_transform_extension_skeleton.cpp",
+    "examples/08_schedule_review_checklist.md",
+    "examples/09_transform_debugging_notes.md",
+    "manifest.json"
+  ]
+}

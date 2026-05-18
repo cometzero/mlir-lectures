@@ -1,0 +1,50 @@
+# Lecture 11 - NPU legal op set draft
+# Purpose: encode what is legal after the npu_graph legalization boundary.
+target: edge_npu_v1
+mma_tile:
+  m: 16
+  n: 16
+  k: 32
+sram:
+  banks: 16
+  capacity_kb: 1024
+ops:
+  npu_graph.matmul:
+    legality: dynamic
+    shape:
+      rank: 2
+      static: [M, N, K]
+      constraints:
+        - K % 32 == 0
+        - M % 16 == 0 or allow_edge_tile == true
+        - N % 16 == 0 or allow_edge_tile == true
+    dtype:
+      lhs: [i8, u8, f16]
+      rhs: [i8, u8, f16]
+      acc: [i32, f32]
+      out: [i8, u8, f16]
+    layout:
+      lhs: [row_major, packed_mk]
+      rhs: [col_major, packed_kn]
+      out: [row_major]
+    epilogue: [none, bias, relu, gelu_lut]
+  npu_graph.conv2d:
+    legality: dynamic
+    shape:
+      input_layout: [NHWC]
+      kernel_layout: [HWCF]
+      static_kernel: true
+      max_kernel: [7, 7]
+      stride: [1, 2]
+      dilation: [1]
+    dtype:
+      data: [i8, f16]
+      acc: [i32, f32]
+  npu_graph.gather:
+    legality: maybe
+    policy: legal only if indices are static or memory access can be coalesced
+unsupported_policy:
+  exact_decompose_first: true
+  approximation_requires_error_budget: true
+  fallback_targets: [cpu_runtime, dsp_runtime]
+  reject_with_diagnostic: true

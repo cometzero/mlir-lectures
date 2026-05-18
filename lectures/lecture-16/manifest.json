@@ -1,0 +1,31 @@
+{
+  "lecture": 16,
+  "title": "Quantization for AI/NPU Compiler",
+  "topic": "INT8/INT4 requantization, accumulator width, MLIR quant dialect, TOSA rescale",
+  "files": [
+    "MLIR_NPU_Lecture_16_Handout.md",
+    "MLIR_NPU_Lecture_16_Notes.docx",
+    "MLIR_NPU_Lecture_16_Notes.pdf",
+    "MLIR_NPU_Lecture_16_Quick_Reference.md",
+    "MLIR_NPU_Lecture_16_Quiz.md",
+    "MLIR_NPU_Lecture_16_Slides.pdf",
+    "MLIR_NPU_Lecture_16_Slides.pptx",
+    "MLIR_NPU_Lecture_16_Worksheet.docx",
+    "MLIR_NPU_Lecture_16_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_16_Accumulator_Width.png",
+    "assets/MLIR_NPU_Lecture_16_INT4_Packing.png",
+    "assets/MLIR_NPU_Lecture_16_Per_Channel_Quantization.png",
+    "assets/MLIR_NPU_Lecture_16_Quantization_Flow.png",
+    "assets/MLIR_NPU_Lecture_16_Requantization_Formula.png",
+    "examples/01_quant_uniform_types.mlir",
+    "examples/02_int8_matmul_requant_pseudo.mlir",
+    "examples/03_requant_multiplier_shift.py",
+    "examples/04_accumulator_width_analysis.py",
+    "examples/05_int4_packing_pseudo.mlir",
+    "examples/06_filecheck_quant_test.mlir",
+    "examples/07_negative_quant_tests.mlir",
+    "examples/08_quantization_policy_checklist.md",
+    "examples/09_npu_quantization_policy.yaml"
+  ]
+}

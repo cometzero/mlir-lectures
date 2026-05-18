@@ -1,0 +1,31 @@
+# Lecture 17: NPU MLP fusion policy draft
+hardware:
+  native_tile:
+    m: 16
+    n: 16
+    k: 32
+  sram_bytes: 2097152
+  accumulator: fp32
+layouts:
+  activation_default: MxN_row
+  activation_fused: MxN_blocked_16x16
+  weight_packed: KxN_blocked_32x16
+fusion:
+  allow:
+    - matmul_bias
+    - matmul_bias_relu
+    - matmul_bias_gelu_tanh
+    - swiglu_elementwise_tile_streaming
+  deny_if:
+    - multiple_consumers_without_profit
+    - dynamic_rank
+    - per_channel_axis_mismatch_after_layout
+    - sram_footprint_exceeds_budget
+    - required_repack_cost_exceeds_saved_traffic
+materialization:
+  explicit_op: npu_graph.layout_materialize
+  allowed_reasons:
+    - fallback_row_major_only
+    - function_boundary_abi
+    - cpu_fallback
+    - quant_axis_mismatch

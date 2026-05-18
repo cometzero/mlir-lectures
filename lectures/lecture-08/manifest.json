@@ -1,0 +1,30 @@
+{
+  "lecture": 8,
+  "topic": "SCF/Affine Loop",
+  "core_output": "M/N/K tile loop and DMA ordering",
+  "slide_count": 35,
+  "files": [
+    "MLIR_NPU_Lecture_08_Handout.md",
+    "MLIR_NPU_Lecture_08_Notes.docx",
+    "MLIR_NPU_Lecture_08_Notes.pdf",
+    "MLIR_NPU_Lecture_08_Quiz.md",
+    "MLIR_NPU_Lecture_08_Slides.pdf",
+    "MLIR_NPU_Lecture_08_Slides.pptx",
+    "MLIR_NPU_Lecture_08_Worksheet.docx",
+    "MLIR_NPU_Lecture_08_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_08_DMA_Double_Buffer_Timeline.png",
+    "assets/MLIR_NPU_Lecture_08_SCF_Affine_Position.png",
+    "assets/MLIR_NPU_Lecture_08_SCF_vs_Affine.png",
+    "assets/MLIR_NPU_Lecture_08_Tile_Footprint.png",
+    "assets/MLIR_NPU_Lecture_08_Tiled_Loop_Nest.png",
+    "examples/01_scf_for_basic.mlir",
+    "examples/02_scf_tiled_matmul_pseudo.mlir",
+    "examples/03_affine_tiled_matmul.mlir",
+    "examples/04_dma_double_buffer_pseudo.mlir",
+    "examples/05_edge_tile_policy.mlir",
+    "examples/06_filecheck_template.mlir",
+    "examples/07_tile_size_sram_calculator.py",
+    "examples/run_lesson08.sh"
+  ]
+}

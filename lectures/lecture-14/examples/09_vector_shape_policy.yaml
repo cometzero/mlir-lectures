@@ -1,0 +1,28 @@
+# Example target description fragment for Lecture 14.
+npu_native_tiles:
+  - name: m16n16k32_i8_i32
+    op: matmul
+    m: 16
+    n: 16
+    k: 32
+    lhs_type: i8
+    rhs_type: i8
+    accumulator_type: i32
+    result_type: i32
+    lhs_layouts: [mk]
+    rhs_layouts: [kn]
+    supports_mask: false
+    requires_sram_operands: true
+  - name: m16n16k16_bf16_f32
+    op: matmul
+    m: 16
+    n: 16
+    k: 16
+    lhs_type: bf16
+    rhs_type: bf16
+    accumulator_type: f32
+    result_type: f32
+    lhs_layouts: [mk]
+    rhs_layouts: [kn]
+    supports_mask: true
+    requires_sram_operands: true

@@ -1,0 +1,21 @@
+{
+  "created": "2026-05-05",
+  "files": [
+    "MLIR_NPU_Compiler_20_Lecture_Notes.pdf",
+    "MLIR_NPU_Compiler_20_Lecture_Slides.pdf",
+    "MLIR_NPU_Compiler_20_Lecture_Slides.pptx",
+    "MLIR_NPU_Compiler_20_Lecture_Course_Plan.md",
+    "MLIR_NPU_Compiler_Quick_Reference.md",
+    "README.md",
+    "manifest.json",
+    "examples/01_basic_stablehlo.mlir",
+    "examples/02_scf_tile_loop.mlir",
+    "examples/03_linalg_matmul.mlir",
+    "examples/04_filecheck_template.mlir",
+    "examples/05_transform_tiling_pseudo.mlir",
+    "examples/06_npu_dialect_pseudo.mlir",
+    "examples/07_runtime_abi.md",
+    "examples/08_capstone_template.md",
+    "assets/mlir_npu_pipeline.png"
+  ]
+}

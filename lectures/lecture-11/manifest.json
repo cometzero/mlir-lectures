@@ -1,0 +1,30 @@
+{
+  "lecture": 11,
+  "title": "Dialect Conversion - NPU legal op set and unsupported op lowering",
+  "files": [
+    "MLIR_NPU_Lecture_11_Handout.md",
+    "MLIR_NPU_Lecture_11_Notes.docx",
+    "MLIR_NPU_Lecture_11_Quick_Reference.md",
+    "MLIR_NPU_Lecture_11_Quiz.md",
+    "MLIR_NPU_Lecture_11_Slides.pptx",
+    "MLIR_NPU_Lecture_11_Worksheet.docx",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_11_Conversion_Flow.png",
+    "assets/MLIR_NPU_Lecture_11_Conversion_Modes.png",
+    "assets/MLIR_NPU_Lecture_11_Legal_Op_Set_Matrix.png",
+    "assets/MLIR_NPU_Lecture_11_Type_Conversion.png",
+    "assets/MLIR_NPU_Lecture_11_Unsupported_Op_Decision_Tree.png",
+    "examples/01_npu_legal_op_set.yaml",
+    "examples/02_before_unsupported_ops.mlir",
+    "examples/03_after_legalized_npu_graph.mlir",
+    "examples/04_conversion_target_skeleton.cpp",
+    "examples/05_conversion_pattern_skeleton.cpp",
+    "examples/06_type_converter_skeleton.cpp",
+    "examples/07_filecheck_conversion_test.mlir",
+    "examples/08_negative_unsupported_shape_test.mlir",
+    "examples/09_unsupported_op_lowering_matrix.md",
+    "examples/10_npu_dialect_conversion_checklist.md",
+    "examples/run_lesson11.sh"
+  ],
+  "generated": "2026-05-07"
+}

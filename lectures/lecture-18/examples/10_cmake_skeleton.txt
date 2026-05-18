@@ -1,0 +1,13 @@
+add_mlir_dialect(NPUOps npu)
+add_mlir_doc(NPUOps NPUDialect Dialects/ -gen-dialect-doc)
+
+set(LLVM_TARGET_DEFINITIONS NPUOps.td)
+mlir_tablegen(NPUOps.h.inc -gen-op-decls)
+mlir_tablegen(NPUOps.cpp.inc -gen-op-defs)
+add_public_tablegen_target(MLIRNPUOpsIncGen)
+
+add_mlir_dialect_library(MLIRNPU
+  NPUDialect.cpp
+  NPUOps.cpp
+  DEPENDS MLIRNPUOpsIncGen
+  LINK_LIBS PUBLIC MLIRIR MLIRSupport MLIRSideEffectInterfaces)

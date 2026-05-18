@@ -1,0 +1,33 @@
+{
+  "lecture": 7,
+  "title": "Linalg-on-Tensors",
+  "created_at": "2026-05-06T13:06:13.485432Z",
+  "root_files": [
+    "MLIR_NPU_Lecture_07_Notes.docx",
+    "MLIR_NPU_Lecture_07_Worksheet.docx",
+    "MLIR_NPU_Lecture_07_Handout.md",
+    "MLIR_NPU_Lecture_07_Quiz.md",
+    "README.md",
+    "manifest.json",
+    "MLIR_NPU_Lecture_07_Slides.pptx",
+    "MLIR_NPU_Lecture_07_Notes.pdf",
+    "MLIR_NPU_Lecture_07_Worksheet.pdf",
+    "MLIR_NPU_Lecture_07_Slides.pdf"
+  ],
+  "examples": [
+    "01_linalg_named_matmul_conv.mlir",
+    "02_linalg_generic_matmul_tensor.mlir",
+    "03_linalg_generic_conv_nhwc_hwcf.mlir",
+    "04_linalg_fusion_candidate.mlir",
+    "05_npu_linalg_lowering_pipeline.mlir",
+    "06_filecheck_template.mlir",
+    "run_lesson07.sh"
+  ],
+  "assets": [
+    "MLIR_NPU_Lecture_07_Conv_NHWC_HWCF_Maps.png",
+    "MLIR_NPU_Lecture_07_Linalg_Generic_Anatomy.png",
+    "MLIR_NPU_Lecture_07_Linalg_Pipeline.png",
+    "MLIR_NPU_Lecture_07_MatMul_Indexing_Maps.png",
+    "MLIR_NPU_Lecture_07_NPU_Linalg_Transform.png"
+  ]
+}

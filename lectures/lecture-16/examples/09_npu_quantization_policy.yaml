@@ -1,0 +1,43 @@
+target: EdgeNPU-Quant-Demo
+version: 1
+activation:
+  storage_type: i8
+  granularity: per_tensor
+  symmetric: false
+  zero_point_required: true
+weight:
+  storage_type: s4
+  granularity: per_channel_per_group
+  group_axis: output_channel
+  group_size: 64
+  packing: two_per_byte_low_first
+  signedness: signed_s4
+bias:
+  storage_type: i32
+  scale_rule: input_scale * weight_scale[channel]
+accumulator:
+  storage_type: i32
+  overflow_policy: reject_or_split_k
+requant:
+  multiplier_bits: 32
+  shift_type: i8
+  max_shift: 62
+  rounding: nearest_even
+  saturation: signed_i8
+runtime_abi:
+  qparams_order: output_channel_major
+  descriptor_fields:
+    - input_scale
+    - input_zero_point
+    - weight_scale_buffer
+    - weight_zero_point_buffer
+    - output_scale
+    - output_zero_point
+    - multiplier_buffer
+    - shift_buffer
+    - int4_packing_mode
+verification:
+  require_positive_scale: true
+  require_channel_axis_remap: true
+  require_bias_scale_match: true
+  require_accumulator_bound_check: true

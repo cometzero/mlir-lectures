@@ -1,0 +1,51 @@
+{
+  "lecture": 6,
+  "topic": "StableHLO, TOSA, and AI Model Input IR",
+  "files": [
+    "MLIR_NPU_Lecture_06_Handout.md",
+    "MLIR_NPU_Lecture_06_Notes.docx",
+    "MLIR_NPU_Lecture_06_Notes.pdf",
+    "MLIR_NPU_Lecture_06_Quiz.md",
+    "MLIR_NPU_Lecture_06_Slides.pdf",
+    "MLIR_NPU_Lecture_06_Slides.pptx",
+    "MLIR_NPU_Lecture_06_Worksheet.docx",
+    "MLIR_NPU_Lecture_06_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_06_Decomposition_Pipeline.png",
+    "assets/MLIR_NPU_Lecture_06_Input_IR_Decision_Tree.png",
+    "assets/MLIR_NPU_Lecture_06_Op_Audit_Matrix.png",
+    "assets/MLIR_NPU_Lecture_06_StableHLO_TOSA_Position.png",
+    "examples/MLIR_NPU_Lecture_06_Decomposition_Checklist.md",
+    "examples/MLIR_NPU_Lecture_06_Runtime_Import_Notes.md",
+    "examples/MLIR_NPU_Lecture_06_StableHLO_Examples.mlir",
+    "examples/MLIR_NPU_Lecture_06_TOSA_Examples.mlir",
+    "manifest.json"
+  ],
+  "references": [
+    {
+      "title": "StableHLO Specification",
+      "url": "https://openxla.org/stablehlo/spec",
+      "note": "StableHLO operation set, semantics, and portability layer."
+    },
+    {
+      "title": "StableHLO Overview",
+      "url": "https://openxla.org/stablehlo",
+      "note": "StableHLO ecosystem and framework/compiler interoperability overview."
+    },
+    {
+      "title": "MLIR TOSA Dialect",
+      "url": "https://mlir.llvm.org/docs/Dialects/TOSA/",
+      "note": "TOSA dialect rationale, operator set, and operation descriptions."
+    },
+    {
+      "title": "TOSA Specification",
+      "url": "https://www.mlplatform.org/tosa/tosa_spec.html",
+      "note": "Published TOSA specification versions."
+    },
+    {
+      "title": "MLIR Passes",
+      "url": "https://mlir.llvm.org/docs/Passes/",
+      "note": "TOSA-to-Linalg/Tensor/SCF lowering pass documentation."
+    }
+  ]
+}

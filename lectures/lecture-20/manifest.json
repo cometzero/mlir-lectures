@@ -1,0 +1,147 @@
+{
+  "lecture": 20,
+  "title": "Lecture 20 - Capstone: Mini NPU Compiler Design Spec",
+  "created_at": "2026-05-09T02:55:00Z",
+  "files": [
+    {
+      "path": "MLIR_NPU_Lecture_20_Capstone_Design_Spec_Template.docx",
+      "bytes": 38467,
+      "sha256": "ecf44fb100919b2619455b9438ecab8e4193927ae0e0d5151ea23676603e4abf"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Capstone_Design_Spec_Template.pdf",
+      "bytes": 86016,
+      "sha256": "cadaffb0ab8c4107e40a7e69f18b56ba16b9e4898a27bd1c87bff23df6819a51"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Handout.md",
+      "bytes": 880,
+      "sha256": "0f9a6b1ac6d463c5900406d9cba4f7189ff4f487342a353130591d9d4d37a009"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Notes.docx",
+      "bytes": 195913,
+      "sha256": "709f8a06bf3a510d745615ca7323fa6bb089d96ea700db82d3b7c9685e058f65"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Notes.pdf",
+      "bytes": 345210,
+      "sha256": "0b74f0b11d2cf077b5f99b3e0036e9d33192fb0c97bfe3f6552bd63a4edc0ceb"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Quick_Reference.md",
+      "bytes": 962,
+      "sha256": "16672399c2a30fed4aa1863833bc09854d842040709218a07992cfa523a8ba18"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Quiz.md",
+      "bytes": 1315,
+      "sha256": "15bb3f12f6546c3288e1670a83839c96bff4142eb0dc1aa3b0cafce729149226"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Slides.pdf",
+      "bytes": 489716,
+      "sha256": "915c6cd8fd62a63f6608117ce0fbcc2905aa2d306c766a6c45e028171e55a77c"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Slides.pptx",
+      "bytes": 421376,
+      "sha256": "23db824f0a4a606ccbf5fec64d02d24bd21088f3679503eda448ab5fc19481a8"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Worksheet.docx",
+      "bytes": 38322,
+      "sha256": "efd99408c3b1de85ba81508994e645fc6e83ede7d2b43a438baaacbe46fd330a"
+    },
+    {
+      "path": "MLIR_NPU_Lecture_20_Worksheet.pdf",
+      "bytes": 87515,
+      "sha256": "33f3b945328a1167f6182de7293b004402e05360c0a01fd9eadc4b22d596e328"
+    },
+    {
+      "path": "README.md",
+      "bytes": 523,
+      "sha256": "945a667a44ce0e154078114768a97d77952b1c2e35a443b6d821908a5a7ea43d"
+    },
+    {
+      "path": "assets/MLIR_NPU_Lecture_20_Capstone_Pipeline.png",
+      "bytes": 110005,
+      "sha256": "cc1121346acc7262d1c6cd338d56b617b88a176a19dce0d2878250dfc68421fe"
+    },
+    {
+      "path": "assets/MLIR_NPU_Lecture_20_Compiler_Stack.png",
+      "bytes": 83989,
+      "sha256": "dd096965facd351685c619ba56f78d0c42b83f5e31037de5a55dbd5f6bc7f3f2"
+    },
+    {
+      "path": "assets/MLIR_NPU_Lecture_20_Deliverables_Map.png",
+      "bytes": 61134,
+      "sha256": "98a2284016fa90cb0d271dca76d4fc81b8f7ba010cf5739ce5b7d07462c746a3"
+    },
+    {
+      "path": "assets/MLIR_NPU_Lecture_20_Evaluation_Rubric.png",
+      "bytes": 61775,
+      "sha256": "d3dae83c44f27405857559f9f1f824669d336edc3bd89d741ffa02bf82fa2722"
+    },
+    {
+      "path": "assets/MLIR_NPU_Lecture_20_Verification_Matrix.png",
+      "bytes": 60547,
+      "sha256": "0da8910d7158f335897cbca03712f75737342b254303593f27d22158a1c67ad1"
+    },
+    {
+      "path": "examples/01_capstone_brief.md",
+      "bytes": 691,
+      "sha256": "c8472649fc2d91862188e7ccc33f734f624de2443538ef795a3e260f3dc63ca9"
+    },
+    {
+      "path": "examples/02_mini_npu_compiler_design_spec_template.md",
+      "bytes": 1956,
+      "sha256": "b59766d022c3b73aee6c3b22a75436a96df0a7de2b4a79116665c0c29b539c83"
+    },
+    {
+      "path": "examples/03_pipeline_spec.yaml",
+      "bytes": 1211,
+      "sha256": "2b86a9d6de06a997870b12d614d2f6fc6df0170db635a5a30726de0456a7140e"
+    },
+    {
+      "path": "examples/04_npu_dialect_capstone_pseudo.mlir",
+      "bytes": 1066,
+      "sha256": "3a750b2893bb3f94283e74d7c72532d15cb1093f5710a76e9eaf5c5477379b49"
+    },
+    {
+      "path": "examples/05_transform_schedule_capstone.mlir",
+      "bytes": 751,
+      "sha256": "dbcfa42153087424f14aa2e2032b895d7a3c4e244380bac14c94feca96d1c13e"
+    },
+    {
+      "path": "examples/06_runtime_abi_manifest.yaml",
+      "bytes": 675,
+      "sha256": "2451e37fc392b7a5b447981da2a0c37456fde59ba4ca8e5eceff045c8c96d5c5"
+    },
+    {
+      "path": "examples/07_filecheck_capstone_tests.mlir",
+      "bytes": 906,
+      "sha256": "5ec28106ba2e0fa03baa520efd6f2c4fec126c4ad239d7adc910b85fab6717bc"
+    },
+    {
+      "path": "examples/08_cost_model_calculator.py",
+      "bytes": 954,
+      "sha256": "0ce2f2332c78b1fb9db3f72b15d8357766594ff0b52217412dd44b507c8ca6b0"
+    },
+    {
+      "path": "examples/09_demo_script_template.md",
+      "bytes": 585,
+      "sha256": "921dc193bb8f0ed708077ae005bea9bb6df314a03e462d9a43456e322c2c9a2f"
+    },
+    {
+      "path": "examples/10_rubric_and_review_checklist.md",
+      "bytes": 1066,
+      "sha256": "9e72a6be6bbd3600d865594082149d17f7659fb4237dc560543dcf085b3c8939"
+    },
+    {
+      "path": "examples/11_presentation_outline.md",
+      "bytes": 329,
+      "sha256": "ae0771b09760f75baa76b8f6af229d98e7f5a844a5e7b1ec29bdc6962be80a34"
+    }
+  ]
+}

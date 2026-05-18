@@ -1,0 +1,35 @@
+pipeline_name: mini_npu_compiler_capstone
+version: 0.1
+input_ir:
+  accepted: [stablehlo, tosa, linalg]
+  require_static_rank: true
+  dynamic_shape_policy: specialize_or_reject
+passes:
+  - name: import-semantic-audit
+    anchor: builtin.module
+    outputs: [shape_report, dtype_report, unsupported_ops]
+  - name: canonicalize-and-cse
+    anchor: builtin.module
+  - name: decompose-composites
+    handles: [gelu, layernorm]
+  - name: legalize-to-npu-graph
+    legal_ops: [matmul, conv2d, add, mul, relu, requant, dma_hint]
+  - name: fuse-epilogues
+    patterns: [matmul_add_relu, matmul_bias_gelu, swiglu]
+  - name: propagate-layout
+    layouts: [row_major, col_major, npu_tile_mk_kn, nhwc_hwcf]
+  - name: apply-transform-schedule
+    schedule_file: transform_schedule_capstone.mlir
+  - name: one-shot-bufferize
+    policy: destination_passing_style
+  - name: assign-memory-spaces
+    spaces: {0: dram, 1: sram, 2: accum}
+  - name: lower-to-npu-kernel
+    ops: [npu.matmul, npu.dma, npu.barrier, npu.requant]
+  - name: emit-runtime-abi
+    outputs: [tensor_descriptor_table, command_buffer, artifact_manifest]
+verification:
+  filecheck: true
+  negative_tests: true
+  golden_numeric_tests: true
+  cost_model: true

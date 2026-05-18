@@ -1,0 +1,24 @@
+{
+  "course": "AI/NPU Compiler MLIR Course",
+  "lecture": 5,
+  "topic": "Dialect System",
+  "created_at": "2026-05-05T14:43:09.908769+00:00",
+  "files": [
+    "MLIR_NPU_Lecture_05_Handout.md",
+    "MLIR_NPU_Lecture_05_Notes.docx",
+    "MLIR_NPU_Lecture_05_Notes.pdf",
+    "MLIR_NPU_Lecture_05_Quiz.md",
+    "MLIR_NPU_Lecture_05_Slides.pdf",
+    "MLIR_NPU_Lecture_05_Slides.pptx",
+    "MLIR_NPU_Lecture_05_Worksheet.docx",
+    "MLIR_NPU_Lecture_05_Worksheet.pdf",
+    "README.md",
+    "assets/MLIR_NPU_Lecture_05_Conversion_Boundary.png",
+    "assets/MLIR_NPU_Lecture_05_Dialect_Anatomy.png",
+    "assets/MLIR_NPU_Lecture_05_Dialect_Layering.png",
+    "examples/MLIR_NPU_Lecture_05_Dialect_Examples.mlir",
+    "examples/MLIR_NPU_Lecture_05_NPU_Dialect_TD.td",
+    "examples/MLIR_NPU_Lecture_05_Pass_Dependent_Dialects.cpp",
+    "manifest.json"
+  ]
+}

@@ -1,0 +1,23 @@
+target_profile:
+  name: npu256_edge_v1
+  abi: "1.0"
+  native_tiles:
+    int8_gemm: {m: 16, n: 16, k: 32, acc: i32}
+    bf16_gemm: {m: 16, n: 16, k: 16, acc: f32}
+  supported_dtypes: [i8, u8, i32, bf16, f16]
+  unsupported_dtypes: [i4_packed]
+  sram_bytes: 4194304
+fallback_policy:
+  i4_packed_weight:
+    preferred: unpack_to_i8_if_memory_allows
+    otherwise: compile_error
+  unsupported_layout:
+    preferred: insert_repack
+    otherwise: cpu_fallback
+  command_buffer_too_large:
+    preferred: split_command_buffer
+    otherwise: compile_error
+validation:
+  require_runtime_capability_match: true
+  reject_unknown_abi_major: true
+  allow_newer_minor_with_reserved_fields: true
