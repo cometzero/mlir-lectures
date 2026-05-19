@@ -1,5 +1,6 @@
 // Lecture 01 pseudo MLIR skeleton. Use for reading the pipeline, not for final syntax.
-// Try: mlir-opt --allow-unregistered-dialect lecture01_pipeline_skeleton.mlir
+// Try from the repository root:
+// mlir-opt --allow-unregistered-dialect lectures/lecture-01/examples/lecture01_pipeline_skeleton.mlir
 
 module {
   func.func @matmul_bias_relu(%A: tensor<1x128x256xf32>, %B: tensor<256x512xf32>,

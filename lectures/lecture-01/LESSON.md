@@ -49,10 +49,17 @@
 공통 환경은 루트의 `docs/lab-environment.md`를 먼저 확인하세요.
 
 ```bash
-# 도구가 설치되어 있다면, 예제 파일을 하나씩 열고 parse/verify를 시도합니다.
-# custom/pseudo dialect가 포함된 예제는 실패할 수 있으므로 --allow-unregistered-dialect를 함께 사용합니다.
-cd lectures/lecture-01
-../../scripts/run_lesson.sh 01 --try-mlir
+# 저장소 루트에서 stock-safe runner를 실행합니다.
+scripts/run_lesson.sh 01 --try-mlir --strict
+
+# source build를 사용한다면 먼저 PATH를 지정합니다.
+export PATH="$PWD/llvm-project/build/bin:$PATH"
+scripts/run_lesson.sh 01 --try-mlir --strict
+
+# 1강 skeleton은 StableHLO/NPU pseudo dialect를 읽는 예제입니다.
+# custom dialect 구현 전에는 unregistered dialect를 허용해 parse합니다.
+mlir-opt --allow-unregistered-dialect \
+  lectures/lecture-01/examples/lecture01_pipeline_skeleton.mlir
 ```
 
 
